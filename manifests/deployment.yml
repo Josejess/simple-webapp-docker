@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: josejesssimplewebappdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: josejesssimplewebappdocker
+  template:
+    metadata:
+      labels:
+        app: josejesssimplewebappdocker 
+    spec:
+      containers:
+        - name: josejesssimplewebappdocker 
+          image: jessacr2.azurecr.io/josejesssimplewebappdocker
+          ports:
+          - containerPort: 80
